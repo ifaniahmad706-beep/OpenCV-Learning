@@ -10,13 +10,17 @@ gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
 small = cv2.resize(image, (480, 602))
 
+crop = image[200:700, 200:700]
+
 print("Ukuran grayscale:", gray.shape)
 print("Pixel grayscale [0,0]:", gray[0, 0])
 print("Ukuran gambar resize:", small.shape)
+print("Ukuran crop:", crop.shape)
 
 cv2.imshow("Original", image)
 cv2.imshow("Grayscale", gray)
 cv2.imshow("Resize", small)
+cv2.imshow("Crop", crop)
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()
