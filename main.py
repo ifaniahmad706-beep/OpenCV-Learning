@@ -14,11 +14,21 @@ crop = image[200:700, 200:700]
 
 rectangle = image.copy()
 
+cv2.imshow("Circle", image)
+
 cv2.rectangle(
     rectangle,
     (200, 200),
     (700, 700),
     (0, 255, 0),
+    3
+)
+
+cv2.circle(
+    image,
+    (480, 600),
+    100,
+    (0, 0, 255),
     3
 )
 
