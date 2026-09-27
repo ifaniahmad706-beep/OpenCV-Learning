@@ -32,6 +32,16 @@ cv2.circle(
     3
 )
 
+cv2.putText(
+    image,
+    "OpenCV Learning",
+    (100, 100),
+    cv2.FONT_HERSHEY_SIMPLEX,
+    1,
+    (255, 0, 0),
+    2
+)
+
 print("Ukuran grayscale:", gray.shape)
 print("Pixel grayscale [0,0]:", gray[0, 0])
 print("Ukuran gambar resize:", small.shape)
@@ -42,6 +52,7 @@ cv2.imshow("Grayscale", gray)
 cv2.imshow("Resize", small)
 cv2.imshow("Crop", crop)
 cv2.imshow("Rectangle", rectangle)
+cv2.imshow("Text", image)
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()
